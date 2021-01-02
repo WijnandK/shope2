@@ -43,7 +43,7 @@ const Swipermouse = () => {
           sensitivity={1}
           mousewheel={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex.toString())}
-          onSwiper={(swiper) => console.log("")}
+          // onSwiper={(swiper) => console.log("")}
           // scrollbar={{ draggable: true }}
           // pagination={{ clickable: true }}
           style={{ height: "100vh", marginTop: "0px" }}

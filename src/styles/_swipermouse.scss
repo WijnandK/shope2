@@ -24,7 +24,6 @@
 .slide_meta_button {
   transition: 3s;
   transform-style: preserve-3d;
-  @include animation-detail(4.6s);
 }
 
 .slide_meta_button.isFlipping {
