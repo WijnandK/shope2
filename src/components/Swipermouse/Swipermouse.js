@@ -20,8 +20,7 @@ import Slidesmain from "../Slidesmain/Slidesmain";
 import w from "../../static/images/w.jpg";
 import b from "../../static/images/b.webp";
 import Buttons from "../Button/Buttons";
-import Backs from "../Button/Backs";
-
+ 
 
  import man from "../../static/images/man.jpg";
 import m2 from "../../static/images/m2.jpg";
