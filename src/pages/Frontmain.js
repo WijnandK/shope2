@@ -1,5 +1,5 @@
 import React,{Fragment} from 'react';
-import Swiper from 'swiper';
+ 
 import Swipermouse from "../components/Swipermouse/Swipermouse"
 
 

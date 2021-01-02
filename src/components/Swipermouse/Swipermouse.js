@@ -1,5 +1,5 @@
 /* eslint-disable no-restricted-globals */
-import React, { useState, useEffect } from "react";
+import React, { useState  } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
@@ -16,44 +16,22 @@ import SwiperCore, {
   Mousewheel,
 } from "swiper";
 import Slidesmain from "../Slidesmain/Slidesmain";
-import Wobble from "react-reveal/Wobble";
-
+ 
 import w from "../../static/images/w.jpg";
 import b from "../../static/images/b.webp";
 import Buttons from "../Button/Buttons";
 import Backs from "../Button/Backs";
 
 
-import woman from "../../static/images/woman.jpg";
-import man from "../../static/images/man.jpg";
+ import man from "../../static/images/man.jpg";
 import m2 from "../../static/images/m2.jpg";
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel]);
 
 const Swipermouse = () => {
   const [activeIndex, setActiveIndex] = useState();
-    const [activeClassName, setActiveClassName] = useState();
-
-  // console.log(activeClassName);
-  // const setAnimate = (activeIndex) => {
-  //     if (activeIndex == 0) {
-  //       setActiveClassName("zeroo")
-  //     }
-  //       if (activeIndex == 1) {
-  //       setActiveClassName("onee")
-  //     }
-  //       if (activeIndex == 2) {
-  //              setActiveClassName("twoo")
-
-  //     }
-  //       if (activeIndex == 3) {
-  //              setActiveClassName("threee")
-
-  //     }
-  // }
-  // useEffect(() => {
-  //     setAnimate(activeIndex)
-  // }, [activeIndex])
+  
+ 
   return (
     <main>
       <div className="wrapping">
@@ -65,13 +43,13 @@ const Swipermouse = () => {
           sensitivity={1}
           mousewheel={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex.toString())}
-          onSwiper={(swiper) => console.log("")}
+          // onSwiper={(swiper) => console.log("")}
           // scrollbar={{ draggable: true }}
           // pagination={{ clickable: true }}
           style={{ height: "100vh", marginTop: "0px" }}
         >
           <SwiperSlide className="slide_item reverse three">
-            <div className={`slide_meta_button ${activeIndex > 0 ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) > 0 ? "isFlipping" : ""}`}>
             
            <div className="front">
              <Buttons  text="New  digital  watches"/>
@@ -94,7 +72,7 @@ const Swipermouse = () => {
          <Slidesmain imagewatch={woman} contain/>
 </SwiperSlide> */}
           <SwiperSlide className="slide_item  ff">
-            <div className={`slide_meta_button ${activeIndex==1 ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 1 ? "isFlipping" : ""}`}>
                   <div className="front">
       <Buttons  /> 
               </div> 
@@ -111,7 +89,7 @@ const Swipermouse = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="slide_item  reverse two">
-            <div className={`slide_meta_button ${activeIndex  == 2 ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 1   ? "isFlipping" : ""}  ${parseInt(activeIndex) === 3   ? "isFlipping" : ""}`}>
                     <div className="front">
               <Backs text="The newest inventory"/> 
               </div> 
@@ -130,7 +108,7 @@ const Swipermouse = () => {
           </SwiperSlide>
 
           <SwiperSlide className="slide_item   one">
-            <div className={`slide_meta_button ${activeIndex== 3 ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 3 ? "isFlipping" : ""}`}>
                          <div className="front">
       <Buttons />
               </div>                  
