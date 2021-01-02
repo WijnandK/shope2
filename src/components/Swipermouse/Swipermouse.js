@@ -55,7 +55,7 @@ const Swipermouse = () => {
              <Buttons  text="New  digital  watches"/>
               </div> 
                  <div className="back">
-            <Backs  />
+            <Buttons  />
               </div> 
             </div>
             <Slidesmain imagewatch={m2} contain />
@@ -77,7 +77,7 @@ const Swipermouse = () => {
       <Buttons  /> 
               </div> 
                   <div className="back">
-       <Backs text="Vintage and cool"/>
+       <Buttons text="Vintage and cool"/>
               </div> 
             </div>
             <Slidesmain imagewatch={man} />
@@ -89,9 +89,9 @@ const Swipermouse = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="slide_item  reverse two">
-            <div className={`slide_meta_button ${parseInt(activeIndex)    ? "isFlipping" : ""}  ${parseInt(activeIndex) === 3   ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${!parseInt(activeIndex)    ? "isFlipping" : ""}  ${parseInt(activeIndex) === 3   ? "isFlipping" : ""}`}>
                     <div className="front">
-              <Backs text="The newest inventory"/> 
+              <Buttons text="The newest inventory"/> 
               </div> 
                     <div className="back">
           <Buttons text="The newest inventory"/>
@@ -113,7 +113,7 @@ const Swipermouse = () => {
       <Buttons />
               </div>                  
                    <div className="back">
-       <Backs />
+       <Buttons />
               </div> 
             </div>
             <Slidesmain imagewatch={w} />
