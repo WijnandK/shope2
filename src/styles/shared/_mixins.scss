@@ -25,6 +25,7 @@
   -moz-animation-delay: $detail;
   animation-delay: $detail;
 }
+
 //screen size 890px and above
 @mixin media6 {
   @media only screen and (min-device-width: 890px) {

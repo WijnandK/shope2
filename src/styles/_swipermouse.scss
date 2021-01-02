@@ -4,7 +4,12 @@
 .slide_inside {
   display: none;
 }
-
+.slide_line {
+  display: none;
+}
+.slide_text {
+  display: none;
+}
 .swiper-slide-active {
 }
 .slide_meta_button {
@@ -17,8 +22,9 @@
   margin-left: 20%;
 }
 .slide_meta_button {
-  transition: 1s;
+  transition: 3s;
   transform-style: preserve-3d;
+  @include animation-detail(4.6s);
 }
 
 .slide_meta_button.isFlipping {

@@ -43,7 +43,7 @@ const Swipermouse = () => {
           sensitivity={1}
           mousewheel={true}
           onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex.toString())}
-          // onSwiper={(swiper) => console.log("")}
+          onSwiper={(swiper) => console.log("")}
           // scrollbar={{ draggable: true }}
           // pagination={{ clickable: true }}
           style={{ height: "100vh", marginTop: "0px" }}
@@ -71,8 +71,8 @@ const Swipermouse = () => {
         
          <Slidesmain imagewatch={woman} contain/>
 </SwiperSlide> */}
-          <SwiperSlide className="slide_item ff">
-            <div className={`slide_meta_button ${parseInt(activeIndex) > 1 ? "isFlipping" : ""}`}>
+          <SwiperSlide className="slide_item  ff">
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 1 ? "isFlipping" : ""}`}>
                   <div className="front">
       <Buttons  /> 
               </div> 
@@ -89,7 +89,7 @@ const Swipermouse = () => {
             </div>
           </SwiperSlide>
           <SwiperSlide className="slide_item  reverse two">
-            <div className={`slide_meta_button ${ (parseInt(activeIndex) > 2  ||parseInt(activeIndex)  <= 1  )  ? "isFlipping" : ""}  ${parseInt(activeIndex) === 3   ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 1   ? "isFlipping" : ""}  ${parseInt(activeIndex) === 3   ? "isFlipping" : ""}`}>
                     <div className="front">
               <Backs text="The newest inventory"/> 
               </div> 
@@ -108,7 +108,7 @@ const Swipermouse = () => {
           </SwiperSlide>
 
           <SwiperSlide className="slide_item   one">
-            <div className={`slide_meta_button ${parseInt(activeIndex) < 3 ? "isFlipping" : ""}`}>
+            <div className={`slide_meta_button ${parseInt(activeIndex) === 3 ? "isFlipping" : ""}`}>
                          <div className="front">
       <Buttons />
               </div>                  
