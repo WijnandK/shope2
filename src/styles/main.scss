@@ -1,0 +1,47 @@
+@import "./shared/colors";
+@import "./shared/mixins";
+
+@import "./button";
+@import "./backdrop";
+@import "./input";
+@import "./loader";
+@import "./avatar";
+@import "mobile-toggle.scss";
+@import "mobile-nav.scss";
+@import "./toolbar";
+@import "./modal";
+@import "./layout";
+@import "./logo";
+@import "./main-nav";
+@import "./navigation-items";
+@import "./swipermouse.scss";
+@import "./slidespcs.scss";
+@import "./image.scss";
+
+.App {
+  font-size: 33px;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: black;
+  margin: 0px 0px 0px 0px;
+}
+
+// PAGES
+
+// @media (prefers-reduced-motion: no-preference) {
+//   .r-logo {
+//     animation: r-logo-spin infinite 20s linear;
+//   }
+// }
+
+// @keyframes r-logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }

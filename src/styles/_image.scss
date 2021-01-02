@@ -1,0 +1,9 @@
+.image {
+  width: 100%;
+  height: 100%;
+}
+@include media6 {
+  .image {
+    height: 100vh;
+  }
+}
