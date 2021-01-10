@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
@@ -13,9 +13,9 @@ import www1 from "../../static/images/www1.jpg";
 import ww from "../../static/images/ww.jpg";
 import w from "../../static/images/w.jpg";
 import b from "../../static/images/b.webp" 
-  
+    
 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]);
 
 const Swiperflip = () => {
   return (
@@ -26,6 +26,7 @@ const Swiperflip = () => {
         centeredSlides={true}
          slidesPerView="auto"
         grabCursor={true}
+        autoplay={{delay: 1200, disableOnInteraction: false}}
            pagination={{ clickable: true }}
 
     >
