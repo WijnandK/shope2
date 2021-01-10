@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
-import Slidesbuild from "../components/Slidesbuilder/Slidesbuild";
+import Slidesbuild from "../components/SlideBuilder/Slidesbuild"
+
 import Mainback from "../components/Mainbacks/Mainback";
 
 const Frontmain = (props) => {
