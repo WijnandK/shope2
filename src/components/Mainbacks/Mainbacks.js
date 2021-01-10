@@ -13,7 +13,7 @@ class Mainbacks extends Component {
             <h1 className="tpx-one-title">TRENDING</h1>
             <h5 className="tpx-one-desc">All the modern watch trends</h5>
             <div className="tpx-one-btn">
-              <Button mode="raised">READ TRENDINGS   </Button>
+              <Button link="/Trending" mode="raised">READ TRENDINGS   </Button>
               <Button design="accent" mode="raised">SEE SHOP</Button>
             </div>
           </div>

@@ -4,7 +4,7 @@
 }
 @include media6 {
   .image {
-    height: calc(100% - 200px);
+    height: 100%;
     display: flex;
     align-self: center;
     box-shadow: -17px 13px 41px rgba(251, 194, 6, 0.3);

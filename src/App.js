@@ -10,6 +10,7 @@ import ErrorHandler from './components/ErrorHandler/ErrorHandler';
  
 import Frontmain from './pages/Frontmain';
 import Products from './pages/Products';
+import Trending from './pages/Trending';
 
  import "./styles/main.scss"
 
@@ -74,6 +75,17 @@ render() {
             <Frontmain
               {...props}
               onLogin={this.loginHandler}
+              loading={this.state.authLoading}
+            />
+          )}
+        />
+        <Route
+          path="/Trending"
+          exact
+          render={props => (
+            <Trending
+              {...props}
+              onSignup={this.signupHandler}
               loading={this.state.authLoading}
             />
           )}
