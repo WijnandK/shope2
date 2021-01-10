@@ -4,7 +4,7 @@ import Image from "../Image/Image"
 const Slidesmain = (props) => {
   return (
     <div className="slideprc__outside">
-      <Image imageUrl={props.imagewatch} center/>
+      <Image imageUrl={props.imagewatch}  />
      
     </div>
   );
