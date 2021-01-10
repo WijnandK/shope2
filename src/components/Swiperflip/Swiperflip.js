@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay } from 'swiper';
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y,  EffectCoverflow, Autoplay } from 'swiper';
 
 // Import Swiper styles
 import 'swiper/swiper.scss';
@@ -22,6 +22,7 @@ const Swiperflip = () => {
     <Swiper 
        effect= 'coverflow'
       spaceBetween={0}
+     
         mousewheel= {true}
         centeredSlides={true}
          slidesPerView="auto"
