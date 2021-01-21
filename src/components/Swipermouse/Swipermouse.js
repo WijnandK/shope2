@@ -6,8 +6,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 // import "swiper/components/mousewheel/mousewheel.scss";
-import Image from "../Image/Image";
-
+ 
 // import Swiper core and required components
 import SwiperCore, {
   Navigation,
@@ -17,12 +16,7 @@ import SwiperCore, {
   Mousewheel,
 } from "swiper";
 
-import m2 from "../../static/images/m2.jpg";
-import ww1 from "../../static/images/ww1.jpg";
-
-import mm from "../../static/images/mm.jpg";
-import s from "../../static/images/s.jpg";
-
+ 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel]);
 
 const Swipermouse = (props) => {
