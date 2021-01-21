@@ -17,7 +17,7 @@
   left: 50px;
   width: calc(100% - 100px);
   top: calc(100% - 91%);
-  z-index: 7779;
+  z-index: -9;
   @include animation-detail(0.5s);
 }
 .tpx-one-title {
@@ -26,17 +26,20 @@
   font-family: $fontspecial;
   margin-bottom: 0px;
   letter-spacing: 0.7px;
+  z-index: -9;
 }
 .tpx-one-desc {
   color: $gray-700;
   font-size: 18px;
   margin-top: 0px;
   letter-spacing: 0.6px;
+  z-index: -9;
 }
 .tpx-one-btn {
   position: fixed;
   top: calc(100% - 19%);
   left: calc(80% - 83%);
+  z-index: -9;
 }
 .tpx-two {
   text-align: center;
@@ -45,7 +48,7 @@
   left: 50px;
   width: calc(100% - 100px);
   top: calc(100% - 91%);
-  z-index: 7779;
+  z-index: -9;
   @include animation-detail(0.5s);
 }
 .tpx-two-title {
@@ -73,7 +76,7 @@
   left: 50px;
   width: calc(100% - 100px);
   top: calc(100% - 91%);
-  z-index: 7779;
+  z-index: -9;
   @include animation-detail(0.5s);
 }
 .tpx-three-title {
@@ -101,8 +104,7 @@
   left: 50px;
   width: calc(100% - 100px);
   top: calc(100% - 91%);
-
-  z-index: 7779;
+  z-index: -9;
   @include animation-detail(0.5s);
 }
 .tpx-four-title {

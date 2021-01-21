@@ -32,7 +32,7 @@ const Swipermouse = (props) => {
         onSwiper={(swiper) => (window.swiper = swiper)}
         direction="vertical"
         spaceBetween={0}
-        speed={520}
+        speed={1120}
         sensitivity={12}
         mousewheel={true}
         onSlideChange={(swiper) => props.setIndexback(swiper.activeIndex)}
@@ -43,21 +43,21 @@ const Swipermouse = (props) => {
         style={{ height: "100vh", marginTop: "0px" }}
       >
         <SwiperSlide className="slide_item  ">
-          <Image imageUrl={mm} />
+         
         </SwiperSlide>
         {/* <SwiperSlide className="slide_item three">           
         
          <Slidesmain imagewatch={woman} contain/>
 </SwiperSlide> */}
         <SwiperSlide className="slide_item ">
-          <Image imageUrl={s} />
+         
         </SwiperSlide>
 
         <SwiperSlide className="slide_item ">
-          <Image imageUrl={m2} />
+          
         </SwiperSlide>
         <SwiperSlide className="slide_item ">
-          <Image imageUrl={ww1} />
+      
         </SwiperSlide>
       </Swiper>
     </main>

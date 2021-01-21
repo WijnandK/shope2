@@ -16,6 +16,7 @@
 @import "./navigation-items";
 @import "./swipermouse.scss";
 @import "./trending.scss";
+@import "./backslide.scss";
 
 @import "./image.scss";
 @import "./mainbacks.scss";
@@ -27,7 +28,6 @@ a {
   text-decoration: none;
 }
 body {
-  background-color: $gray-400;
   margin: 0px 0px 0px 0px;
 }
 @keyframes fadein {
