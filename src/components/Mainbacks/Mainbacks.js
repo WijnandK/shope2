@@ -23,10 +23,7 @@ class Mainbacks extends Component {
             <h5 className="tpx-two-desc">
               collections from all over the world
             </h5>
-            <div className="tpx-two-btn">
-              <Button design="success" mode="raised">Continental blog</Button>
-              <Button design="accent" mode="raised">SEE SHOP</Button>
-            </div>
+          
           </div>
         );
         break;
@@ -37,10 +34,7 @@ class Mainbacks extends Component {
             <h5 className="tpx-three-desc">
               This is not business, this is passion
             </h5>
-            <div className="tpx-three-btn">
-              <Button design="accent" mode="raised">PASSION</Button>
-              <Button design="success" mode="raised">SEE SHOP</Button>
-            </div>
+           
           </div>
         );
         break;
@@ -51,12 +45,7 @@ class Mainbacks extends Component {
             <h5 className="tpx-four-desc">
               Resourcing all informative information regarding smart watches
             </h5>
-            <div className="tpx-four-btn">
-              <Button mode="raised" design="accent">
-               GET INFORMED
-              </Button>
-              <Button design="success" mode="raised">SEE SHOP</Button>
-            </div>
+     
           </div>
         );
         break;
