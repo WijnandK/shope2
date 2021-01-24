@@ -11,11 +11,8 @@ class Mainbacks extends Component {
         tpx = (
           <div className={`tpx-one  fadein  `}>
             <h1 className="tpx-one-title">TRENDING</h1>
-            <h5 className="tpx-one-desc">All the modern watch trends</h5>
-            <div className="tpx-one-btn">
-              <Button link="/Trending" mode="raised">READ TRENDINGS   </Button>
-              <Button design="accent" mode="raised">SEE SHOP</Button>
-            </div>
+            <h5 className="tpx-one-desc">All the modern watch trends, following the latest digital innovations in smarwatches. Lets go digital !</h5>
+   
           </div>
         );
         break;

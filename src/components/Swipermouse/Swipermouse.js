@@ -6,7 +6,7 @@ import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
 // import "swiper/components/mousewheel/mousewheel.scss";
- 
+ import Button from "../Button/Button";   
 // import Swiper core and required components
 import SwiperCore, {
   Navigation,
@@ -37,7 +37,7 @@ const Swipermouse = (props) => {
         style={{ height: "100vh", marginTop: "0px" }}
       >
         <SwiperSlide className="slide_item  ">
-         
+             
         </SwiperSlide>
         {/* <SwiperSlide className="slide_item three">           
         

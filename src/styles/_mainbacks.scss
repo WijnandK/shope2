@@ -33,13 +33,12 @@
   font-size: 18px;
   margin-top: 0px;
   letter-spacing: 0.6px;
-  z-index: -9;
 }
 .tpx-one-btn {
   position: fixed;
   top: calc(100% - 19%);
   left: calc(80% - 83%);
-  z-index: -9;
+  z-index: 9999;
 }
 .tpx-two {
   text-align: center;
