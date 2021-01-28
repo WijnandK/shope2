@@ -31,6 +31,7 @@
   margin: 0px;
   padding-top: 25px;
   padding-left: 15px;
+  margin: 26px;
 }
 .trending--banner h3 {
   color: $gray-400;
@@ -47,9 +48,10 @@
   margin: 0px;
 }
 .image--icon {
-  width: 200px;
-  height: 300px;
+  width: 120px;
+  height: 180px;
   margin-top: 15px;
+  margin-left: calc(40% - 70px);
 }
 .trending--banner p {
   font-size: 18px;
@@ -107,32 +109,32 @@
   }
   .swipe_item_b {
     background-color: purple;
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
   .swipe_item_c {
     background-color: teal;
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
   .swipe_item_d {
     background-color: gray;
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
   .swipe_item_e {
     background-color: wheat;
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
   .swipe_item_f {
     background-color: saddlebrown;
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
   .swipe_item_ff {
     background-color: rgb(19, 139, 83);
-    height: 333px;
+    height: 433px;
     width: calc(100% - 510px);
   }
 }

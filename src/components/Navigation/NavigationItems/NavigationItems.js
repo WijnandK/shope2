@@ -3,7 +3,11 @@ import { NavLink } from 'react-router-dom';
 
  
 const navItems = [
-  { id: 'feed', text: 'Feed', link: '/', auth: true },
+  { id: 'trending', text: 'Trends', link: '/trending', auth: true },
+    { id: 'home', text: 'home', link: '/', auth: true },
+      { id: 'specials', text: 'Specials', link: '/specials', auth: true },
+    { id: 'shop', text: 'Shop', link: '/shop', auth: true },
+
   { id: 'login', text: 'Login', link: '/', auth: false },
   { id: 'signup', text: 'Signup', link: '/signup', auth: false }
 ];

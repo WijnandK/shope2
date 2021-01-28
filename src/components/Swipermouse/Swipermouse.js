@@ -33,9 +33,9 @@ const Swipermouse = (props) => {
         // onSwiper={(swiper) => console.log("")}
         // scrollbar={{ draggable: true }}
         // pagination={{ clickable: true }}
-        style={{ height: "100vh", marginTop: "0px" }}
+        style={{ height: "100vh",width: "100%", marginTop: "0px" }}
       >
-        <SwiperSlide className="slide_item  ">
+        <SwiperSlide className="slide_item">
              
         </SwiperSlide>
         {/* <SwiperSlide className="slide_item three">           

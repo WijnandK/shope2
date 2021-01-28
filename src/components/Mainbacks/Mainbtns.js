@@ -1,7 +1,8 @@
 import React, { Component } from "react";
  
 
-class Mainbacks extends Component {
+class Mainbtns extends Component {
+  
   render() {
     
    
@@ -9,22 +10,22 @@ class Mainbacks extends Component {
     switch (this.props.type) {
       case 0:
         tpx = (
-        <button onClick={console.log('herheh')} className={`op-btn  fadein}`}>SHOP</button>
+        <button onClick={() => console.log('herheh')} className={`op-btn  fadein}`}>SHOP</button>
         );
         break;
       case 1:
         tpx = (
-      <button onClick={console.log('herheh')} className={`op-btn   fadeout }`}>NEWS</button>
+      <button onClick={() => console.log('herheh')} className={`op-btn   fadeout }`}>NEWS</button>
         );
         break;
       case 2:
         tpx = (
-       <button onClick={console.log('herheh')} className={`op-btn  fadein  }`}>SPECIALS</button>
+       <button onClick={() => console.log('herheh')} className={`op-btn  fadein  }`}>SPECIALS</button>
         );
         break;
       case 3:
         tpx = (
-       <button onClick={console.log('herheh')} className={`op-btn  fadeout }`}>ABOUT</button>
+       <button onClick={() => console.log('herheh')} className={`op-btn  fadeout }`}>ABOUT</button>
         );
         break;
 
@@ -35,4 +36,4 @@ class Mainbacks extends Component {
   }
 }
 
-export default Mainbacks;
+export default Mainbtns;

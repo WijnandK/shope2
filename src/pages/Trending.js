@@ -22,7 +22,7 @@ class Trending extends Component {
             Vind voor jou de geschikte stijl voor elk event..
           </p>
           <div className="image--icon">
-        <Image imageUrl={watch1} />
+               <Image imageUrl={watch1} center/>
 
           </div>
        

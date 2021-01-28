@@ -9,6 +9,10 @@ import MobileNavigation from './components/Navigation/MobileNavigation/MobileNav
 import ErrorHandler from './components/ErrorHandler/ErrorHandler';
  
 import Frontmain from './pages/Frontmain';
+import Specials from './pages/Specials';
+
+import Shop from './pages/Shop';
+
 import Products from './pages/Products';
 import Trending from './pages/Trending';
 
@@ -95,6 +99,28 @@ render() {
           exact
           render={props => (
             <Products
+              {...props}
+              onSignup={this.signupHandler}
+              loading={this.state.authLoading}
+            />
+          )}
+        />
+         <Route
+          path="/Specials"
+          exact
+          render={props => (
+            <Specials
+              {...props}
+              onSignup={this.signupHandler}
+              loading={this.state.authLoading}
+            />
+          )}
+        />
+         <Route
+          path="/Shop"
+          exact
+          render={props => (
+            <Shop
               {...props}
               onSignup={this.signupHandler}
               loading={this.state.authLoading}

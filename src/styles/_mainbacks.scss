@@ -63,11 +63,7 @@
   margin-top: 0px;
   letter-spacing: 0.6px;
 }
-.tpx-two-btn {
-  position: fixed;
-  top: calc(100% - 19%);
-  left: calc(80% - 83%);
-}
+
 .tpx-three {
   text-align: center;
   height: 20vh;
@@ -91,11 +87,7 @@
   margin-top: 0px;
   letter-spacing: 0.6px;
 }
-.tpx-three-btn {
-  position: fixed;
-  top: calc(100% - 19%);
-  left: calc(80% - 83%);
-}
+
 .tpx-four {
   text-align: center;
   height: 20vh;
@@ -119,11 +111,7 @@
   margin-top: 0px;
   letter-spacing: 0.6px;
 }
-.tpx-four-btn {
-  position: fixed;
-  top: calc(100% - 19%);
-  left: calc(80% - 83%);
-}
+
 @keyframes fadein {
   from {
     opacity: 0;
@@ -142,47 +130,43 @@
 }
 @include media6 {
   .tpx-one {
-    width: calc(80% - 480px);
+    width: calc(80% - 780px);
   }
-  .tpx-one-btn {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    width: calc(80% - 380px);
+  .tpx-one-desc {
+    font-size: 22px;
+    margin-top: 150px;
+    line-height: 1;
+    color: $white;
   }
+
   .tpx-two {
     width: calc(80% - 480px);
   }
-  .tpx-two-btn {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    width: calc(80% - 380px);
+  .tpx-two-desc {
+    font-size: 26px;
+    margin-top: 150px;
+    width: calc(80% - 180px);
+    line-height: 1.2;
+    color: $white;
   }
   .tpx-three {
     width: calc(80% - 480px);
   }
-  .tpx-three-btn {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    width: calc(80% - 380px);
+  .tpx-three-desc {
+    font-size: 26px;
+    margin-top: 150px;
+    width: calc(80% - 180px);
+    line-height: 1.2;
+    color: $white;
   }
   .tpx-four {
     width: calc(80% - 480px);
   }
-  .tpx-four-btn {
-    display: flex;
-    flex-direction: column;
-
-    align-items: center;
-
-    width: calc(80% - 380px);
+  .tpx-four-desc {
+    font-size: 26px;
+    margin-top: 150px;
+    width: calc(80% - 180px);
+    line-height: 1.8;
+    color: $white;
   }
 }

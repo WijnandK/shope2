@@ -1,15 +1,15 @@
 import React from 'react';
-
-import Image from './Image';
-
+ 
 
 const avatar = props => (
   <div
     className="avatar"
-    style={{ width: props.size + 'rem', height: props.size + 'rem' }}
-  >
-    <Image imageUrl={props.image} />
-  </div>
+    style={{
+      backgroundImage: `url('${props.imageUrl}')`,
+      backgroundSize: props.contain ? 'contain' : 'cover',
+      backgroundPosition: props.left ? 'left' : 'center'
+    }}
+  />
 );
 
 export default avatar;
