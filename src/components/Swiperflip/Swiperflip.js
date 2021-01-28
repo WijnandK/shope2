@@ -7,8 +7,7 @@ import 'swiper/swiper.scss';
 import 'swiper/components/navigation/navigation.scss';
 import 'swiper/components/pagination/pagination.scss';
 import 'swiper/components/scrollbar/scrollbar.scss';
-import Image from "../Image/Image";
-import Avatar from "../Image/Avatar"
+ import Avatar from "../Image/Avatar"
 import e from "../../static/images/e.jpg";
 import www1 from "../../static/images/www1.jpg";
 import ww from "../../static/images/ww.jpg";

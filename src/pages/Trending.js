@@ -6,7 +6,7 @@ import Image from "../components/Image/Image"
 class Trending extends Component {
   render() {
     return (
-      <div className="trending--page">
+      <div className="trending--page fadein">
         <h1 className="trending--title"> INSPIRATION</h1>
         <Swiperflip />
         <div className="trending--banner">

@@ -6,7 +6,7 @@ const navItems = [
   { id: 'trending', text: 'Trends', link: '/trending', auth: true },
     { id: 'home', text: 'home', link: '/', auth: true },
       { id: 'specials', text: 'Specials', link: '/specials', auth: true },
-    { id: 'shop', text: 'Shop', link: '/shop', auth: true },
+    { id: 'products', text: 'Products', link: '/products', auth: true },
 
   { id: 'login', text: 'Login', link: '/', auth: false },
   { id: 'signup', text: 'Signup', link: '/signup', auth: false }

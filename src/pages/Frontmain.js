@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useEffect } from "react";
+import React, { Fragment, useState  } from "react";
 import Slidesbuild from "../components/SlideBuilder/Slidesbuild"
 
 import Mainback from "../components/Mainbacks/Mainback";
@@ -8,14 +8,11 @@ import Mainbtns from "../components/Mainbacks/Mainbtns"
 
 const width2 = window.innerWidth
  const Frontmain = (props) => {
-  console.log(width2)
+   
         
-  const [width, seewidth] = useState()
-  const [index, setIndex] = useState(0);
+   const [index, setIndex] = useState(0);
   const [isFade, setFade] = useState(true);
-  const setWindowSlide = useEffect(() => {
-    
-  })
+ 
   const setNewTitle = (i) => {
     setIndex(i);
     setFade(!isFade)

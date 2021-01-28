@@ -11,9 +11,11 @@ import ErrorHandler from './components/ErrorHandler/ErrorHandler';
 import Frontmain from './pages/Frontmain';
 import Specials from './pages/Specials';
 
-import Shop from './pages/Shop';
+ 
 
 import Products from './pages/Products';
+import Product from './pages/Product';
+
 import Trending from './pages/Trending';
 
  import "./styles/main.scss"
@@ -105,6 +107,17 @@ render() {
             />
           )}
         />
+           <Route
+          path="/Product"
+          exact
+          render={props => (
+            <Product
+              {...props}
+              onSignup={this.signupHandler}
+              loading={this.state.authLoading}
+            />
+          )}
+        />
          <Route
           path="/Specials"
           exact
@@ -116,17 +129,7 @@ render() {
             />
           )}
         />
-         <Route
-          path="/Shop"
-          exact
-          render={props => (
-            <Shop
-              {...props}
-              onSignup={this.signupHandler}
-              loading={this.state.authLoading}
-            />
-          )}
-        />
+       
         <Redirect to="/" />
       </Switch>
     );

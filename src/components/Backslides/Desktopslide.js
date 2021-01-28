@@ -1,4 +1,4 @@
- import React, {Component, Fragment  } from 'react';
+ import React, {Component    } from 'react';
 import Image from "../Image/Image"  
 import m2 from "../../static/images/m2.jpg";
 import ww1 from "../../static/images/ww1.jpg";

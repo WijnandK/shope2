@@ -20,12 +20,17 @@
 
 @import "./image.scss";
 @import "./mainbacks.scss";
+@import "./products.scss";
 
 .App {
   font-size: 33px;
 }
 a {
   text-decoration: none;
+}
+p {
+  margin: 4px;
+  font-family: $fontspecial;
 }
 body {
   margin: 0px 0px 0px 0px;
