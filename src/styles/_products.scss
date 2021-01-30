@@ -25,3 +25,37 @@
   display: flex;
   justify-content: space-evenly;
 }
+.product_container {
+  text-align: center;
+  background-image: linear-gradient(45deg, $teal, $cyan);
+  height: 100vh;
+}
+.product_swiper_wrapper {
+  width: 100%;
+  height: 6 5vh;
+  background-color: orange;
+}
+.product_text {
+  color: $gray-500;
+}
+.product_des {
+  color: white;
+  font-family: $fontspecial;
+  letter-spacing: 1.5;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.productSlideItem {
+  background-color: rebeccapurple;
+  height: 100%;
+  width: 100%;
+}
+
+.productSlideWrapper {
+  background-color: green;
+
+  height: 65vh;
+}
+.product_p {
+  color: $gray-400;
+}

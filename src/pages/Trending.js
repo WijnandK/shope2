@@ -17,16 +17,16 @@ class Trending extends Component {
           <Button link="/shop" mode="raised" design="accent"> SEE SHOP</Button>
         </div>
         </div>
-        <div className="trending--banner2">
+        {/* <div className="trending--banner2">
           <p className="trending--text">
             Vind voor jou de geschikte stijl voor elk event..
-          </p>
+          </p> */}
           <div className="image--icon">
                <Image imageUrl={watch1} center/>
 
           </div>
-       
-        </div>
+          <h1 className="img-text">Styles from every continent. We bring them here.</h1>
+        {/* </div> */}
       </div>
     );
   }
