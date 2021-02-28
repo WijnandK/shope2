@@ -31,3 +31,60 @@ export const setDetailProduct = (product) => {
     product : product 
   };
 };
+
+export const setProductFilter = (filterproducts) => {
+  return {
+    type: actionTypes.SET_PRODUCT_FILTER,
+    filterproducts: filterproducts
+  }
+}
+ 
+ 
+export function getBrands(brands) {
+ 
+
+  return {
+    type: actionTypes.GET_BRANDS,
+    brands: brands,
+  };
+}
+export function setBrandsFailed(brands) {
+  return {
+    type: actionTypes.SET_BRANDS_FAIL
+ 
+  };
+}
+export const getBrandsToShop =   () => {
+  return (dispatch) => {
+    axios.get('http://localhost:3002/shop/brands').then((res) => {
+      dispatch(getBrands(res.data))
+    })
+    .catch((error) => {
+      dispatch(setBrandsFailed('Failer'))
+    })
+  }
+}
+ export function getColors(colors) {
+ 
+
+  return {
+    type: actionTypes.GET_COLORS,
+    colors: colors,
+  };
+}
+export function setColorsFailed(colors) {
+  return {
+    type: actionTypes.SET_COLORS_FAIL
+ 
+  };
+}
+export const getColorsToShop =   () => {
+  return (dispatch) => {
+    axios.get('http://localhost:3002/shop/colors').then((res) => {
+      dispatch(getColors(res.data))
+    })
+    .catch((error) => {
+      dispatch(setColorsFailed('Failer'))
+    })
+  }
+}

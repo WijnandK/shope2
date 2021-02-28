@@ -34,6 +34,21 @@ const input = props => (
         onBlur={props.onBlur}
       />
     )}
+    {props.control === 'checkbox' && (
+      <input
+      type="checkbox"
+        className={[
+          !props.valid ? 'invalid' : 'valid',
+          props.touched ? 'touched' : 'untouched'
+        ].join(' ')}
+        id={props.id}
+        rows={props.rows}
+        required={props.required}
+        value={props.value}
+        onChange={e => props.onChange(props.id, e.target.value)}
+        onBlur={props.onBlur}
+      />
+    )}
   </div>
 );
 

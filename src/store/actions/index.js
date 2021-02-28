@@ -1,1 +1,1 @@
-export { setProducts, setProductsFailed , getProductsToShop, setDetailProduct } from "./product";
+export { setProducts, setProductsFailed , getProductsToShop, setDetailProduct, setProductFilter,      getBrandsToShop, getColorsToShop } from "./product";
