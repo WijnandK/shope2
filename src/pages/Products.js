@@ -7,7 +7,12 @@ import FilterEdit from "../components/FilterEdit/FilterEdit";
 
 class Products  extends Component {
 state = {
-  openFilterModal: false
+  openFilterModal: false,
+    filters:{
+            brand:[],
+            color:[],
+             
+        }
 }
  
   componentDidMount() {

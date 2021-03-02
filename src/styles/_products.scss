@@ -56,3 +56,11 @@
 .product_p {
   color: $gray-400;
 }
+.checkedItems {
+  display: flex;
+  flex-direction: row;
+  background-color: wheat;
+  justify-content: space-evenly;
+}
+.checkedItem {
+}
