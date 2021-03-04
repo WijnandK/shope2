@@ -14,9 +14,14 @@ export const setProductsFailed = () => {
     type: actionTypes.SET_PRODUCTS_FAIL
   }
 }
-export const getProductsToShop =   () => {
+export const getProductsToShop =   (skip, limit,filters =[], previousState = []) => {
+      const data = {
+        limit,
+        skip,
+        filters
+    }
   return (dispatch) => {
-    axios.get('http://localhost:3002/shop/products').then((res) => {
+    axios.post('http://localhost:3002/shop/products', data).then((res) => {
       dispatch(setProducts(res.data))
     })
     .catch((error) => {
@@ -88,3 +93,5 @@ export const getColorsToShop =   () => {
     })
   }
 }
+
+ 

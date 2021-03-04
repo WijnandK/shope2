@@ -17,7 +17,7 @@ const modal = props =>
         </Button>
         <Button
           mode="raised"
-          // onClick={props.onAcceptModal}
+          onClick={props.onAcceptModal}
           // disabled={!props.acceptEnabled}
           // loading={props.isLoading}
         >

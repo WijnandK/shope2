@@ -12,16 +12,19 @@ state = {
             brand:[],
             color:[],
              
-        }
+        },
+        loading: false,
+        initproducts: null
 }
  
-  componentDidMount() {
-   this.props.getBrands() ;
-    this.props.getColors() ;
-    this.props.getProductsInShop()
+ async componentDidMount() {
+   await this.props.getBrands() ;
+    await this.props.getColors() ;
+    await this.props.getProductsInShop()
+
+    this.setState({initproducts: this.props.products.products})
   }
-  getProductDetail = () => {
-    
+   getProductDetail  =   () => {
     this.props.history.push('/product')
   }
   setEditFilters = () => {
@@ -32,13 +35,26 @@ state = {
    cancelEditHandler = () => {
     this.setState({ openFilterModal: false  });
   };
+   finishEditHandler = () => {
+    this.setState({ openFilterModal: false  });
+  };
+  onAcceptHandler = async () => {
+            await this.props.getProductsInShop()
+      
+    this.setState({openFilterModal: false})
+  }
   render() {
-     
+     let cardlist = null
+ 
+      console.log(this.state.initproducts)
+       
     return (
       <div>
         <FilterEdit 
         editFilters={this.state.openFilterModal}
          onCancelEdit={this.cancelEditHandler}
+         onAcceptHandler={this.onAcceptHandler}
+         triggerNewProducts={this.getNewProducts}
         />
         <h1> PRODUCS</h1>
         <div>
@@ -47,7 +63,9 @@ state = {
             <button onClick={this.setEditFilters}  >Filters</button>
           </div>
         </div>
-          <Cardlist products={this.props.products.products} productdetail={this.getProductDetail}/>
+   
+         <Cardlist products={this.props.products.products} productdetail={this.getProductDetail}/>
+ 
       </div>
     );
   }

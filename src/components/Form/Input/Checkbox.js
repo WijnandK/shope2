@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const Checkbox = () => {
-  return (
-    <div>
-          <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"/>
+class Checkbox extends Component {
+  render() {
+    return (
+ <div>
+  <input type="checkbox" onChange={() =>  this.props.handleFilters(this.props.id) }id={this.props.id}   checked={this.props.checked}/>
 
     </div>
-  );
+    )
+     
+  }
 }
 
 export default Checkbox;

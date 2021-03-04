@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+import * as actions from "../../store/actions/index"
 
 import Backdrop from "../Backdrop/Backdrop";
 import Modal from "../Modal/Modal";
@@ -12,8 +13,8 @@ class FilterEdit extends Component {
         skip:0,
         filters:{
             brand:[],
-            frets:[],
-            wood:[],
+            color:[],
+    
             price:[]
         }
   };
@@ -21,30 +22,47 @@ class FilterEdit extends Component {
     this.setState({
      
       filters: {
-         brand:[],
-            frets:[],
-            wood:[],
+         color:[],
+            brand:[],
+       
             price:[]
       }
     });
     this.props.onCancelEdit();
   };
+  
+  acceptPostChangeHandler = () => {
+        console.log('RENDER NEW GET PRODUCTS ')
+
+        console.log(this.state.filters)
+        this.setState({   filters:{
+            brand:[],
+            color:[],
+    
+            price:[]
+        }})
+        this.props.onAcceptHandler()
+  };
  handleFilters = (filters,category) => {
        const newFilters = {...this.state.filters}
        newFilters[category] = filters;
 
-        if(category === "price"){
-            let priceValues = this.handlePrice(filters);
-            newFilters[category] = priceValues
-        }
+        // if(category === "price"){
+        //     let priceValues = this.handlePrice(filters);
+        //     newFilters[category] = priceValues
+        // }
 
-       this.showFilteredResults(newFilters)
+      //  this.showFilteredResults(newFilters)
        this.setState({
            filters: newFilters
        })
+       this.addedFilterList( filters)
     }
-
+    addedFilterList = (data) => {
+      console.log(data)
+    }
   render() {
+    console.log(this.state.filters)
     return (
       this.props.editFilters ? (
           <Fragment>
@@ -56,8 +74,18 @@ class FilterEdit extends Component {
           onAcceptModal={this.acceptPostChangeHandler}
           isLoading={this.props.loading}
         >
-            <FilterCollapse title="Brands" list={this.props.brands}/> 
-          <FilterCollapse title="Colors" list={this.props.colors}/> 
+            <FilterCollapse 
+            title="Brands" 
+            list={this.props.brands}
+         handleFilters={(filters) => this.handleFilters(filters, 'brand')}
+
+            /> 
+          <FilterCollapse 
+          title="Colors" 
+          list={this.props.colors}
+         handleFilters={(filters) => this.handleFilters(filters, 'color')}
+
+          /> 
 
         </Modal>
       </Fragment>
@@ -73,4 +101,12 @@ class FilterEdit extends Component {
     colors: state.product.colors
   };
 };
-export default connect(mapStateToProps)(FilterEdit);
+
+ const mapDispatchToProps = (dispatch) => {
+   return {
+     getProductsInShop: (result) => dispatch(actions.getProductsToShop(result)),
+
+  
+   };
+ };
+export default connect(mapStateToProps, mapDispatchToProps)(FilterEdit);
