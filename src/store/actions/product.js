@@ -14,14 +14,29 @@ export const setProductsFailed = () => {
     type: actionTypes.SET_PRODUCTS_FAIL
   }
 }
-export const getProductsToShop =   (skip, limit,filters =[], previousState = []) => {
-      const data = {
-        limit,
-        skip,
+// export const getProductsToShop =   (skip, limit,filters =[], previousState = []) => {
+//       const data = {
+//         limit,
+//         skip,
+//         filters
+//     }
+//   return (dispatch) => {
+//     axios.get('http://localhost:3002/shop/products', data).then((res) => {
+//       dispatch(setProducts(res.data))
+//     })
+//     .catch((error) => {
+//       dispatch(setProductsFailed('Failer'))
+//     })
+//   }
+// }
+
+export const getProductsInit = ( filters =[]) => {
+        const data = {
+     
         filters
     }
   return (dispatch) => {
-    axios.post('http://localhost:3002/shop/products', data).then((res) => {
+    axios.post('http://localhost:3002/shop/filters', data).then((res) => {
       dispatch(setProducts(res.data))
     })
     .catch((error) => {

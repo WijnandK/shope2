@@ -35,7 +35,7 @@ state = {
     return (
       <Fragment>
           <div>
-  <h1>{this.props.title ? this.props.title : "load"}</h1>
+  <h1 className="checkedTitle">{this.props.title ? this.props.title : "load"}</h1>
         </div>
       <div className="checkedItems">
       

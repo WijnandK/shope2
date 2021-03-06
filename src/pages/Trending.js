@@ -12,10 +12,10 @@ class Trending extends Component {
         <div className="trending--banner">
           <h3>PASSION</h3>
           <h5>for watches and events</h5>
-          <p> We are excited to share our expertise on watches with our clients</p>
-        <div className="trending--btn">
-          <Button link="/shop" mode="raised" design="accent"> SEE SHOP</Button>
-        </div>
+          <p className="trending--text"> We are excited to share our expertise on watches with our clients</p>
+  
+          <Button link="/shop" mode="raised" > SEE SHOP</Button>
+       
         </div>
         {/* <div className="trending--banner2">
           <p className="trending--text">

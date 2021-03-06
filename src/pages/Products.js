@@ -21,7 +21,7 @@ state = {
    await this.props.getBrands() ;
     await this.props.getColors() ;
     await this.props.getProductsInShop()
-
+      console.log('been here')
     this.setState({initproducts: this.props.products.products})
   }
    getProductDetail  =   () => {
@@ -38,15 +38,17 @@ state = {
    finishEditHandler = () => {
     this.setState({ openFilterModal: false  });
   };
-  onAcceptHandler = async () => {
-            await this.props.getProductsInShop()
-      
+  onAcceptHandler = async (filter) => {
+      console.log(filter)
+      // let resultfilters = {}
+
+
+          await this.props.getProductsInShop(filter)
+
     this.setState({openFilterModal: false})
   }
   render() {
-     let cardlist = null
- 
-      console.log(this.state.initproducts)
+    
        
     return (
       <div>
@@ -56,12 +58,12 @@ state = {
          onAcceptHandler={this.onAcceptHandler}
          triggerNewProducts={this.getNewProducts}
         />
-        <h1> PRODUCS</h1>
+     
         <div>
-          <div>
-            <h1>Filters</h1> 
+        
+           
             <button onClick={this.setEditFilters}  >Filters</button>
-          </div>
+        
         </div>
    
          <Cardlist products={this.props.products.products} productdetail={this.getProductDetail}/>
@@ -78,7 +80,7 @@ const mapStateToProps = (state) => {
 };
  const mapDispatchToProps = (dispatch) => {
    return {
-     getProductsInShop: (result) => dispatch(actions.getProductsToShop(result)),
+     getProductsInShop: (result) => dispatch(actions.getProductsInit(result)),
 
      getColors: (result) => dispatch(actions.getColorsToShop(result)),
 

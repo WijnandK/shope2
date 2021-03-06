@@ -1,8 +1,9 @@
 .card_list_grid {
   display: grid;
   grid-template-columns: 41vw 41vw;
-
-  grid-auto-rows: 42vh;
+  background: linear-gradient(to left, $cyan, $green 60%, $cyan 75%);
+  opacity: 30%;
+  grid-auto-rows: 49vh;
   justify-content: space-evenly;
   gap: 25px 0px;
 }
@@ -21,6 +22,7 @@
   height: 35px;
   display: flex;
   justify-content: space-evenly;
+  color: $gray-300;
 }
 .product_container {
   text-align: center;
@@ -58,11 +60,36 @@
 }
 .checkedItems {
   display: flex;
-  flex-direction: row;
-  background-color: wheat;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  column-gap: 15px;
+
+  width: 219px;
 }
 
-.c {
-  color: gray;
+.checkboxitem {
+  align-self: flex-end;
+}
+label[for="type"] {
+  color: $cyan;
+  font-weight: bold;
+  font-family: $fontspecial;
+  letter-spacing: 1.2px;
+  margin-right: 25px;
+}
+.checkedTitle {
+  color: $mblue;
+}
+.card_name {
+  color: $gray-700;
+  height: 33px;
+  font-size: 14px;
+}
+
+.card_brand {
+  color: $gray-500;
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
 }

@@ -13,9 +13,7 @@ class FilterEdit extends Component {
         skip:0,
         filters:{
             brand:[],
-            color:[],
-    
-            price:[]
+            color:[] 
         }
   };
     cancelPostChangeHandler = () => {
@@ -23,9 +21,7 @@ class FilterEdit extends Component {
      
       filters: {
          color:[],
-            brand:[],
-       
-            price:[]
+            brand:[] 
       }
     });
     this.props.onCancelEdit();
@@ -33,19 +29,28 @@ class FilterEdit extends Component {
   
   acceptPostChangeHandler = () => {
         console.log('RENDER NEW GET PRODUCTS ')
+        let filters = {...this.state.filters}
+         let c = {...this.state.filters}
 
-        console.log(this.state.filters)
         this.setState({   filters:{
             brand:[],
-            color:[],
-    
-            price:[]
+            color:[] 
         }})
-        this.props.onAcceptHandler()
+        let finalfilters = {}
+          for (let char in c) {
+              console.log( filters[char] )
+                console.log(char)
+              if (filters[char].length > 0) {
+                finalfilters[char] =  filters[char] 
+              }
+
+          }
+            console.log(finalfilters)
+        this.props.onAcceptHandler(finalfilters)
   };
  handleFilters = (filters,category) => {
-       const newFilters = {...this.state.filters}
-       newFilters[category] = filters;
+       const newFilters =  {...this.state.filters}
+       newFilters[category].push(filters)  
 
         // if(category === "price"){
         //     let priceValues = this.handlePrice(filters);
@@ -56,19 +61,19 @@ class FilterEdit extends Component {
        this.setState({
            filters: newFilters
        })
-       this.addedFilterList( filters)
+       this.addedFilterList( )
     }
     addedFilterList = (data) => {
       console.log(data)
     }
   render() {
-    console.log(this.state.filters)
+    
     return (
       this.props.editFilters ? (
           <Fragment>
         <Backdrop onClick={this.cancelPostChangeHandler} />
         <Modal
-          title="New Post"
+          title="Choose your favorites"
           acceptEnabled={this.state.formIsValid}
           onCancelModal={this.cancelPostChangeHandler}
           onAcceptModal={this.acceptPostChangeHandler}
@@ -104,7 +109,7 @@ class FilterEdit extends Component {
 
  const mapDispatchToProps = (dispatch) => {
    return {
-     getProductsInShop: (result) => dispatch(actions.getProductsToShop(result)),
+     getProductsInShop: (result) => dispatch(actions.getProductsInit(result)),
 
   
    };
