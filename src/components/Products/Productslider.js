@@ -25,6 +25,7 @@ const Productslider = (props) => {
     <main>
       <Swiper
       spaceBetween={50}
+     
       slidesPerView={1}
       navigation
       pagination={{ clickable: true }}
