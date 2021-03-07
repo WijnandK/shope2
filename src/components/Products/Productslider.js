@@ -20,7 +20,7 @@ import SwiperCore, {
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel]);
 
 const Productslider = (props) => {
-  console.log(props)
+ 
   return (
     <main>
       <Swiper

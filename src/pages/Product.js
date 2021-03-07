@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import Productslider from "../components/Products/Productslider"
 import Accordion from "../components/Acccordion/Accordion"
+ 
 class Product extends Component {
   render() {
       console.log(this.props.product)
@@ -11,8 +12,8 @@ class Product extends Component {
     return (
       <div className="product_container">
         
-        <div className="product_swiper_wrapper"> 
-          <Productslider images={this.props.product.images}/>
+        <div className="product_swiper_wrapper" onClick={()=> console.log(this.props.product.images)}> 
+          <Productslider  images={this.props.product.images}/>
         </div>
          
         <h1 className="product_text"> { product.naam}</h1>
