@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import Button from "../components/Button/Button"
 import { connect } from "react-redux";
-
+import { NavLink } from "react-router-dom";
 import Productslider from "../components/Products/Productslider"
 import Accordion from "../components/Acccordion/Accordion"
 import DetailSlider from "../components/SlideBuilder/DetailSlider/DetailSlider"
@@ -22,8 +22,7 @@ class Product extends Component {
     this.setState({imageHdIndex: imgId})
   }
   render() {
-      console.log(this.props.product)
-      console.log(this.state.imageHdIndex)
+   
     const {product} = this.props 
     return (
       <Fragment>
@@ -49,11 +48,11 @@ class Product extends Component {
         <p className="product_p">Popularity: {product.verkocht}</p>
         <p className="product_p">In stock</p>
         <Button mode="raised" design="success">ADD TO CART</Button>
-        <Button mode="raised">BACK TO PRODUCTS</Button>
+        <NavLink to="/products" className="raiser">BACK TO PRODUCTS</NavLink>
         <Accordion title="Product info" desc={product.beschrijving}  />
          <Accordion title="Design and materials" desc={product.type}  />
 
-          <div style={{height: '29px'}}/>
+          {/* <div style={{height: '29px'}}/>  */}
       </div>
       </Fragment>
     );
