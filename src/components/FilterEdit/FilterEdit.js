@@ -4,8 +4,7 @@ import * as actions from "../../store/actions/index"
 
 import Backdrop from "../Backdrop/Backdrop";
 import Modal from "../Modal/Modal";
-import Checkbox from "../Form/Input/Checkbox";
-import FilterCollapse from "./FilterCollapse"
+ import FilterCollapse from "./FilterCollapse"
 
 class FilterEdit extends Component {
    state = {
@@ -45,7 +44,7 @@ class FilterEdit extends Component {
               }
 
           }
-            console.log(finalfilters)
+           
         this.props.onAcceptHandler(finalfilters)
   };
  handleFilters = (filters,category) => {
@@ -61,11 +60,9 @@ class FilterEdit extends Component {
        this.setState({
            filters: newFilters
        })
-       this.addedFilterList( )
+     
     }
-    addedFilterList = (data) => {
-      console.log(data)
-    }
+    
   render() {
     
     return (

@@ -1,8 +1,8 @@
-import React, { Component , Fragment} from 'react';
+import React, { Component  } from 'react';
 
 class Checkbox extends Component {
   render() {
-    console.log(this.props.type)
+ 
     return (
  <div className="checkboxitem">
      <label htmlFor="type">{this.props.type}</label>

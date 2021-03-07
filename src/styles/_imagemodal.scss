@@ -43,7 +43,7 @@
   top: 350px;
   text-transform: uppercase;
   text-align: right;
-  right: calc(100% -12 0px);
+  left: 30px;
   color: $success;
   font-weight: bold;
   border-bottom: 1px solid $pink;
@@ -65,7 +65,7 @@
 @include media6 {
   .image--modal {
     width: 40rem;
-    left: calc((100% - 40rem) / 2);
+    left: 30px;
     height: 100vh;
   }
 }

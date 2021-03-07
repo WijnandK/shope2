@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import Productslider from "../components/Products/Productslider"
 import Accordion from "../components/Acccordion/Accordion"
 import DetailSlider from "../components/SlideBuilder/DetailSlider/DetailSlider"
-import image from '../components/Image/Image';
+ 
 class Product extends Component {
   state = {
     expandImages: false,

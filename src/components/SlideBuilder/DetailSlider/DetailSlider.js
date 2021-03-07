@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Modal from "../../Modal/Modal"
-import Backdrop from "../../Backdrop/Backdrop"
+ 
 import Image from "../../Image/Image"
  import ImageModal from "../../Modal/ImageModal"
 
