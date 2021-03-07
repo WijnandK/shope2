@@ -1,7 +1,9 @@
 import React from 'react';
  
 
-const image = props => (
+const image = props => {
+  // console.log(props)
+  return  (
   <div
     className="image"
     style={{
@@ -11,5 +13,6 @@ const image = props => (
     }}
   />
 );
+}
 
 export default image;

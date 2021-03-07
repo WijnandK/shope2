@@ -53,19 +53,12 @@ html {
   outline: none;
   height: 40px;
   margin-left: calc(50% - 70px);
-  z-index: 9999999999999999999999999999999;
+  z-index: 5;
   cursor: pointer;
   position: fixed;
   bottom: 9vh;
 }
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+
 @include media6 {
   .op-btn {
     height: 50px;

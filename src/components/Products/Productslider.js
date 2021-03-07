@@ -5,7 +5,7 @@ import "swiper/swiper.scss";
 import "swiper/components/navigation/navigation.scss";
 import "swiper/components/pagination/pagination.scss";
 import "swiper/components/scrollbar/scrollbar.scss";
-import Image from "../Image/Image"
+import Avatar from "../Image/Avatar"
 // import "swiper/components/mousewheel/mousewheel.scss";
  // import Swiper core and required components
 import SwiperCore, {
@@ -14,10 +14,12 @@ import SwiperCore, {
   Scrollbar,
   A11y,
   Mousewheel,
+ Virtual 
+
 } from "swiper";
 
- 
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel]);
+  
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y, Mousewheel, Virtual]);
 
 const Productslider = (props) => {
  
@@ -30,13 +32,14 @@ const Productslider = (props) => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
+      virtual
       onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log('slide change')}
+      onSlideChange={(swiper) => props.setImgHd(swiper.activeIndex)}  
       className="productSlideWrapper"
       >
-        {props.images.map((img) => (
-           <SwiperSlide key={img} className="productSlideItem">
-             <Image imageUrl={img} />
+        {props.images.map((img, index) => (
+           <SwiperSlide key={img}  virtualIndex={index}  className="productSlideItem">
+             <Avatar imageUrl={img} />
            </SwiperSlide>
         ))} 
          {/* <SwiperSlide className="productSlideItem">

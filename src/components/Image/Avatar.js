@@ -1,9 +1,11 @@
 import React from 'react';
  
 
-const avatar = props => (
+const avatar = props => {
+  console.log(props)
+  return  (
   <div
-    className="avatar"
+    className="image"
     style={{
       backgroundImage: `url('${props.imageUrl}')`,
       backgroundSize: props.contain ? 'contain' : 'cover',
@@ -11,5 +13,6 @@ const avatar = props => (
     }}
   />
 );
+}
 
-export default avatar;
+export default avatar ;

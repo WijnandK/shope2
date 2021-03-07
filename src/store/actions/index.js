@@ -8,3 +8,9 @@ export {
   getColorsToShop,
   getProductsInit,
 } from "./product";
+
+
+export {
+  getProductImg,
+ getProductImgFail
+} from "./interfaces";

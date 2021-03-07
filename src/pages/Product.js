@@ -5,9 +5,11 @@ import { connect } from "react-redux";
 import Productslider from "../components/Products/Productslider"
 import Accordion from "../components/Acccordion/Accordion"
 import DetailSlider from "../components/SlideBuilder/DetailSlider/DetailSlider"
+import image from '../components/Image/Image';
 class Product extends Component {
   state = {
-    expandImages: false
+    expandImages: false,
+    imageHdIndex: 0
   }
   expandImagesHandler = () => {
     this.setState({expandImages: !  this.state.expandImages})
@@ -15,8 +17,13 @@ class Product extends Component {
   acceptHandler = () => {
     this.setState({expandImages: false})
   }
+  setDetailSliderIndex = (imgId) => {
+    console.log(imgId)
+    this.setState({imageHdIndex: imgId})
+  }
   render() {
       console.log(this.props.product)
+      console.log(this.state.imageHdIndex)
     const {product} = this.props 
     return (
       <Fragment>
@@ -26,12 +33,14 @@ class Product extends Component {
         <DetailSlider 
           expanding={this.state.expandImages} 
           images={this.props.product.images}
+         imageHd={this.props.product.images[this.state.imageHdIndex]}
+
           acceptHandler={this.acceptHandler}
           />
       <div className="product_container">
         
         <div className="product_swiper_wrapper"> 
-          <Productslider  images={this.props.product.images}/>
+          <Productslider  images={this.props.product.images} setImgHd={(img) => this.setDetailSliderIndex(img)}/>
         </div>
          
         <h1 className="product_text"> { product.naam}</h1>
