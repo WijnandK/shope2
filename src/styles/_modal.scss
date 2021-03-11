@@ -9,6 +9,11 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
   transition: all 0.3s ease-out;
 }
+.movein {
+  opacity: 0;
+  @include animation(movein 2s);
+  @include animation-fill-mode(forwards);
+}
 
 .modal__header {
   border-bottom: 2px solid $teal;

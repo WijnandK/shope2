@@ -22,7 +22,7 @@ const width2 = window.innerWidth
     slider = <Desktopslide caseIndex={index}/>
   }
   return (
-    <Fragment>
+    < Fragment>
         {slider}
       <Slidesbuild setIndexback={setNewTitle} />
       <Mainback caseIndex={index} />

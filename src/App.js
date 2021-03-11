@@ -19,7 +19,7 @@ import Product from './pages/Product';
 import Trending from './pages/Trending';
 
  import "./styles/main.scss"
-import "./App.css"
+ 
 
 class App extends Component {
   state = {

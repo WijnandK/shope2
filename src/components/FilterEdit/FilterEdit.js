@@ -5,7 +5,7 @@ import * as actions from "../../store/actions/index"
 import Backdrop from "../Backdrop/Backdrop";
 import Modal from "../Modal/Modal";
  import FilterCollapse from "./FilterCollapse"
-import { CSSTransition } from 'react-transition-group';
+ 
 
 class FilterEdit extends Component {
    state = {
@@ -93,7 +93,7 @@ class FilterEdit extends Component {
           /> 
 
         </Modal>
-     
+      
       </Fragment>
       ) : null
     

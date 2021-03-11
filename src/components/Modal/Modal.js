@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Button from '../Button/Button';
-import { CSSTransition } from 'react-transition-group';
+ 
 
 
 const Modal = props => {

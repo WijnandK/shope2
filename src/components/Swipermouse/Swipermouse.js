@@ -25,7 +25,7 @@ const Swipermouse = (props) => {
         onSwiper={(swiper) => (window.swiper = swiper)}
         direction="vertical"
         spaceBetween={0}
-        speed={1120}
+        speed={790}
         sensitivity={12}
         mousewheel={true}
         onSlideChange={(swiper) => props.setIndexback(swiper.activeIndex)}

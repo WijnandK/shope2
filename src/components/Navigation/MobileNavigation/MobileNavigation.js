@@ -3,7 +3,7 @@ import React from 'react';
 import NavigationItems from '../NavigationItems/NavigationItems';
  
 const mobileNavigation = props => (
-  <nav className={['mobile-nav', props.open ? 'open' : ''].join(' ')}>
+  <nav className={['mobile-nav' , props.open ? 'open' : ''].join(' ')}>
     <ul
       className={['mobile-nav__items', props.mobile ? 'mobile' : ''].join(' ')}
     >

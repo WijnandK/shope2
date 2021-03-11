@@ -1,12 +1,12 @@
 .fadein {
   opacity: 0;
-  @include animation(fadein 2s);
+  @include animation(fadein 1s);
   @include animation-fill-mode(forwards);
 }
 
 .fadeout {
   opacity: 0;
-  @include animation(fadeout 2s);
+  @include animation(fadeout 1s);
   @include animation-fill-mode(forwards);
 }
 
@@ -114,10 +114,10 @@
 
 @keyframes fadein {
   from {
-    opacity: 0;
+    opacity: 50%;
   }
   to {
-    opacity: 1;
+    opacity: 100%;
   }
 }
 @keyframes fadeout {

@@ -64,6 +64,22 @@
     opacity: 0;
   }
 }
+
+@keyframes movein {
+  0% {
+    opacity: 1;
+    transform: translateX(-90%);
+  }
+  50% {
+    opacity: 60%;
+    transform: translateX(25%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 //screen size 890px and above
 @mixin media6 {
   @media only screen and (min-device-width: 890px) {

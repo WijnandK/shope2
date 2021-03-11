@@ -59,6 +59,7 @@ html {
   cursor: pointer;
   position: fixed;
   bottom: 9vh;
+  @include animation-detail(0.5s);
 }
 
 @include media6 {
