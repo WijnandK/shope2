@@ -56,7 +56,7 @@ class Products extends Component {
         />
 
         <button className="filter_btn" onClick={this.setEditFilters}>
-          Filters
+          Filter 
         </button>
 
         <Cardlist
