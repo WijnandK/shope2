@@ -6,7 +6,8 @@ import * as actionTypes from "./actionsTypes";
 export const setProducts = (products) => {
   return {
     type: actionTypes.SET_PRODUCTS,
-    products: products,
+    products: products.products,
+    totalItems: products.totalItems
   };
 };
 export const setProductsFailed = () => {
@@ -29,13 +30,40 @@ export const setProductsFailed = () => {
 //     })
 //   }
 // }
+export const purchaseBurgerStart = () => {
+  return {
+    type: actionTypes.PURCHASE_BURGER_START,
+  };
+};
 
-export const getProductsInit = ( filters =[]) => {
+export const getProductDetailInit = (prodId) => {
+  return (dispatch) => {
+    dispatch(purchaseBurgerStart())
+    axios.get(`http://localhost:3002/shop/product/${prodId}`).then((res) => {
+      dispatch(setProductDetail(res.data))
+    }).catch((error) => {
+      setProductsFailed('Failer')
+    })
+  }
+}
+ 
+ 
+export const setProductDetail = (product) => {
+  return {
+    type: actionTypes.GET_PRODUCT_DETAIL,
+    product: product
+  };
+};
+
+export const getProductsInit = ( filters =[],  page  ) => {
         const data = {
      
-        filters
+        filters: filters,
+          page: page
     }
+      
   return (dispatch) => {
+      dispatch(purchaseBurgerStart());
     axios.post('http://localhost:3002/shop/filters', data).then((res) => {
       dispatch(setProducts(res.data))
     })

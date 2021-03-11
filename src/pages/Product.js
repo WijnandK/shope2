@@ -9,7 +9,10 @@ import DetailSlider from "../components/SlideBuilder/DetailSlider/DetailSlider"
 class Product extends Component {
   state = {
     expandImages: false,
-    imageHdIndex: 0
+    imageHdIndex: 0 
+  }
+  componentDidMount() {
+    console.log(this.props)
   }
   expandImagesHandler = () => {
     this.setState({expandImages: !  this.state.expandImages})
@@ -22,24 +25,31 @@ class Product extends Component {
     this.setState({imageHdIndex: imgId})
   }
   render() {
-   
-    const {product} = this.props 
+     const  product   = this.props.product 
+  
     return (
-      <Fragment>
-        <div className={`image__action__trigger ${this.state.expandImages ? "action-open" : ""}` } onClick={this.expandImagesHandler}>
+    
+        <Fragment>
+              
+  <div className={`image__action__trigger ${this.state.expandImages ? "action-open" : ""}` } onClick={this.expandImagesHandler}>
           {!this.state.expandImages ? (<p  className="expand__open">See more</p>) : (<p className="expand__close">Close</p>)} 
-        </div>
-        <DetailSlider 
+       </div>
+       
+        {!this.props.loading  && (
+          <Fragment>  
+          
+      
+       <DetailSlider 
           expanding={this.state.expandImages} 
-          images={this.props.product.images}
-         imageHd={this.props.product.images[this.state.imageHdIndex]}
+          images={ product.images}
+        imageHd={ product.images[this.state.imageHdIndex]}
 
           acceptHandler={this.acceptHandler}
-          />
-      <div className="product_container">
+          />  
+      <div className="product_container fadein">
         
         <div className="product_swiper_wrapper"> 
-          <Productslider  images={this.props.product.images} setImgHd={(img) => this.setDetailSliderIndex(img)}/>
+          <Productslider  images={ product.images} setImgHd={(img) => this.setDetailSliderIndex(img)}/>
         </div>
          
         <h1 className="product_text"> { product.naam}</h1>
@@ -53,16 +63,23 @@ class Product extends Component {
          <Accordion title="Design and materials" desc={product.type}  />
 
           {/* <div style={{height: '29px'}}/>  */}
-      </div>
-      </Fragment>
+          </div>
+ 
+           </Fragment>
+        )}
+         
+       </Fragment>
+     
     );
   }
 }
 
  const mapStateToProps = (state) => {
+  
   return {
  
-    product: state.product.product
+    product : state.product.product ,
+    loading : state.product.loading
   };
 };
-export default connect(mapStateToProps   )(Product);
+export default connect(mapStateToProps  )(Product);
