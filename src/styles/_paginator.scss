@@ -1,6 +1,8 @@
 .paginator__controls {
   display: flex;
   justify-content: center;
+  position: relative;
+  bottom: 40px;
 }
 
 .paginator__control {

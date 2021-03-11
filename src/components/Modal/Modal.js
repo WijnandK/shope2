@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
 
 import Button from '../Button/Button';
- 
+import { CSSTransition } from 'react-transition-group';
 
-const modal = props =>
-  ReactDOM.createPortal(
-    <div className="modal">
+
+const Modal = props => {
+
+  
+  const content = (
+ 
+     
+  <div className={`modal movein`} >
       <header className="modal__header">
         <h1>{props.title}</h1>
       </header>
@@ -24,8 +29,14 @@ const modal = props =>
           Accept
         </Button>
       </div>
-    </div>,
-    document.getElementById('modal-root')
-  );
-
-export default modal;
+    </div>
+ 
+    
+  )
+  
+      
+  
+ 
+ return ReactDOM.createPortal(content, document.getElementById('modal-root'));
+  }
+export default Modal;

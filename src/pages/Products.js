@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions/index";
 
@@ -66,7 +66,7 @@ class Products extends Component {
   }
   render() {
     let content = <Spinner/>
-    if (! this.props.loading) {
+    if (!this.props.loading) {
 
       content = (
    <Paginator
@@ -97,15 +97,16 @@ class Products extends Component {
       )
     }
     return (
-      <div>
+      <Fragment>
         <FilterEdit
           editFilters={this.state.openFilterModal}
           onCancelEdit={this.cancelEditHandler}
           onAcceptHandler={this.onAcceptHandler}
           triggerNewProducts={this.getNewProducts}
         />
+     
           {content}
-      </div>
+      </Fragment>
     );
   }
 }

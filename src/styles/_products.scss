@@ -3,10 +3,11 @@
   grid-template-columns: 41vw 41vw;
   background: linear-gradient(to left, $cyan, $green 60%, $cyan 75%);
   opacity: 30%;
-  grid-auto-rows: 55vh;
+  grid-auto-rows: 44vh;
   justify-content: space-evenly;
   gap: 35px 0px;
-
+  padding-bottom: 120px;
+  padding-top: 90px;
   z-index: -1;
 }
 .card_list_item {
@@ -17,7 +18,7 @@
 .card_p_image {
   width: 100%;
   background-color: saddlebrown;
-  height: 68%;
+  height: 58%;
 }
 .card_p_actions {
   width: 100%;

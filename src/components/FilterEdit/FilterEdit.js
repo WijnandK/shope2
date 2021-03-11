@@ -5,6 +5,7 @@ import * as actions from "../../store/actions/index"
 import Backdrop from "../Backdrop/Backdrop";
 import Modal from "../Modal/Modal";
  import FilterCollapse from "./FilterCollapse"
+import { CSSTransition } from 'react-transition-group';
 
 class FilterEdit extends Component {
    state = {
@@ -69,12 +70,14 @@ class FilterEdit extends Component {
       this.props.editFilters ? (
           <Fragment>
         <Backdrop onClick={this.cancelPostChangeHandler} />
+       
         <Modal
           title="Choose your favorites"
           acceptEnabled={this.state.formIsValid}
           onCancelModal={this.cancelPostChangeHandler}
           onAcceptModal={this.acceptPostChangeHandler}
           isLoading={this.props.loading}
+          show={this.props.editFilters}
         >
             <FilterCollapse 
             title="Brands" 
@@ -90,6 +93,7 @@ class FilterEdit extends Component {
           /> 
 
         </Modal>
+     
       </Fragment>
       ) : null
     
