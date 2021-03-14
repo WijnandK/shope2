@@ -9,7 +9,7 @@ class Mainbacks extends Component {
       case 0:
         tpx = (
           <div className={`tpx-one  fadein  `}>
-            <h1 className="tpx-one-title">TRENDING</h1>
+            <h1 className="tpx-one-title">TRENDING!</h1>
             <h5 className="tpx-one-desc">All the modern watch trends, following the latest digital innovations in smarwatches. Lets go digital !</h5>
    
           </div>
