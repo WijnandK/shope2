@@ -10,8 +10,4 @@ export {
   getProductDetailInit
 } from "./product";
 
-
-export {
-  getProductImg,
- getProductImgFail
-} from "./interfaces";
+ 
