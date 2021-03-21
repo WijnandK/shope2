@@ -7,7 +7,7 @@ export {
   getBrandsToShop,
   getColorsToShop,
   getProductsInit,
-  getProductDetailInit
+  getProductDetailInit,
 } from "./product";
 
- 
+export { login, auth } from "./auth";

@@ -16,6 +16,11 @@ export const GET_PRODUCTS_FAILED = "GET_PRODUCTS_FAILED"
 
 export const GET_PRODUCT_DETAIL = "GET_PRODUCT_DETAIL"
 
+
+/// auth
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS"
+export const LOGIN_FAIL= "LOGIN_FAIL"
+export const GETAUTH = "GETAUTH"; 
 /// INTERFACES ACTIONSS /// 
 
 export const SET_PRODUCT_IMG = "SET_PRODUCT_IMG";

@@ -6,6 +6,8 @@ import Productslider from "../components/Products/Productslider";
 import Accordion from "../components/Acccordion/Accordion";
 import DetailSlider from "../components/SlideBuilder/DetailSlider/DetailSlider";
 import Spinner from "../components/Spinner/Spinner";
+import * as actions from "../store/actions/index";
+
 class Product extends Component {
   state = {
     expandImages: false,
@@ -13,6 +15,7 @@ class Product extends Component {
   };
   componentDidMount() {
     console.log(this.props);
+    this.props.getAuth()
   }
   expandImagesHandler = () => {
     this.setState({ expandImages: !this.state.expandImages });
@@ -90,4 +93,11 @@ const mapStateToProps = (state) => {
     loading: state.product.loading,
   };
 };
-export default connect(mapStateToProps)(Product);
+const mapDispatchToProps = (dispatch) => {
+  return {
+ 
+        getAuth:  () => dispatch(actions.auth())
+
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(Product);

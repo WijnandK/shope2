@@ -7,7 +7,7 @@ import FilterEdit from "../components/FilterEdit/FilterEdit";
 import Paginator from "../components/Paginator/Paginator";
 import Spinner from "../components/Spinner/Spinner";
 
-
+const TOKEN = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IncyZnNAZ21haWwuY29tIiwidXNlcklkIjoiNjA0NTAxNDY4MzdjYWQ1ODJjMjYzYzQ5IiwiaWF0IjoxNjE2MzUzMjI5LCJleHAiOjE2MTYzNjA0Mjl9.PWhp-wDNfs7cHWnWyHzYws_hE7TqWvt8xhiqNEvd_0g"
 class Products extends Component {
   state = {
     openFilterModal: false,
@@ -17,12 +17,14 @@ class Products extends Component {
     },
     postPage: 1,
     postLoading: false,
+   
   };
 
   async componentDidMount() {
     await this.props.getBrands();
     await this.props.getColors();
-    this.loadProducts();
+    await this.props.loadUser()
+     this.loadProducts();
     console.log("mountedgere");
     await this.props.getProductsInShop(this.state.filters, this.state.postPage);
   }
@@ -127,6 +129,9 @@ const mapDispatchToProps = (dispatch) => {
     getColors: (result) => dispatch(actions.getColorsToShop(result)),
 
     getBrands: (result) => dispatch(actions.getBrandsToShop(result)),
+    loadUser:  () => dispatch(actions.login()),
+        getAuth:  () => dispatch(actions.auth())
+
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(Products);

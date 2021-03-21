@@ -33,7 +33,7 @@ class App extends Component {
   };
 
   
-
+ 
   mobileNavHandler = isOpen => {
     this.setState({ showMobileNav: isOpen, showBackdrop: isOpen });
   };
@@ -157,6 +157,7 @@ render() {
               onChooseItem={this.mobileNavHandler.bind(this, false)}
               onLogout={this.logoutHandler}
               isAuth={this.state.isAuth}
+            
             />
           }
         />
@@ -165,5 +166,5 @@ render() {
     );
   }
 }
-
+  ERR HERE CART PROPS FOR NAV AND COUNT
 export default withRouter(App);
