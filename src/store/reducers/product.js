@@ -10,7 +10,7 @@ const reducer = ( state = initState, action) => {
         ...state,
         loading: true,
       };
-        //    case actionTypes.SET_DETAIL_STATE:
+        //    ca  se actionTypes.SET_DETAIL_STATE:
         //  return {...state, product: action.product}
           case actionTypes.SET_PRODUCTS_FAIL: 
         return {...state, error: true, loading: false}
