@@ -166,5 +166,5 @@ render() {
     );
   }
 }
-  ERR HERE CART PROPS FOR NAV AND COUNT
+  // ERR HERE CART PROPS FOR NAV AND COUNT
 export default withRouter(App);

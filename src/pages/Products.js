@@ -25,8 +25,8 @@ class Products extends Component {
     await this.props.getColors();
     await this.props.loadUser()
      this.loadProducts();
-    console.log("mountedgere");
-    await this.props.getProductsInShop(this.state.filters, this.state.postPage);
+  
+    // await this.props.getProductsInShop(this.state.filters, this.state.postPage);
   }
   getProductDetail = () => {
     this.props.history.push("/product");
@@ -46,6 +46,7 @@ class Products extends Component {
       page--;
       this.setState({ postPage: page });
     }
+
     await this.props.getProductsInShop(this.state.filters, this.state.postPage);
   };
   cancelEditHandler = () => {
